@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/material_blue_grey_800"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FILTER"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download:"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/download_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload:"
+        android:layout_below="@+id/download_label"
+        android:id="@+id/upload_label"/>
+
+    <SeekBar
+        android:max="50"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/download_label"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/seek_download"/>
+
+    <SeekBar
+        android:max="50"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/download_label"
+        android:layout_below="@+id/seek_download"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/seek_upload" />
+
+    <Spinner
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/spinner_isp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Isp:"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/seek_download"
+        android:id="@+id/isp_label"/>
+
+    <Spinner
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_isp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/spinner_time" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        android:layout_toRightOf="@+id/seek_upload"
+        android:layout_alignBaseline="@+id/upload_label"
+        android:id="@+id/time_label"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/seek_upload"
+        android:text="Filter"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

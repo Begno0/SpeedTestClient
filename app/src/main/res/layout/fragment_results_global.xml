@@ -1,0 +1,154 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GlobalResultsFragment">
+
+    <fragment
+        android:id="@+id/global_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <begnardi.luca.graphics.RoundButton
+        android:id="@+id/button_heatmap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:radius="28"
+        custom:color_base="#0000FF"
+        custom:image="@drawable/heat_map"
+        custom:color_hover="#0000CC"
+        custom:shadow="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="vertical"
+        android:id="@+id/linear"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fragment_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/bright_foreground_material_dark"
+            android:padding="5dp"
+            android:layout_alignBottom="@+id/linear"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_title"
+                android:textColor="@android:color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/title"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_download"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/title"
+                android:layout_marginBottom="50dp"
+                android:id="@+id/download_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_upload"
+                android:layout_below="@+id/download_label"
+                android:id="@+id/upload_label"/>
+
+            <SeekBar
+                android:max="50"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/download_label"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/seek_download"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/value_download"
+                android:layout_below="@+id/isp_label"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <SeekBar
+                android:max="50"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/download_label"
+                android:layout_below="@+id/seek_download"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/seek_upload"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/value_upload"
+                android:layout_below="@+id/upload_label"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Spinner
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_isp"
+                android:layout_alignTop="@+id/download_label"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_isp"
+                android:layout_below="@+id/title"
+                android:layout_toRightOf="@+id/seek_download"
+                android:id="@+id/isp_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_time"
+                android:layout_toRightOf="@+id/seek_upload"
+                android:layout_alignBaseline="@+id/upload_label"
+                android:id="@+id/time_label"/>
+
+            <Spinner
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_time"
+                android:layout_alignTop="@+id/upload_label"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/seek_upload"
+                android:text="@string/filter_button"
+                android:layout_marginTop="10dp"
+                android:id="@+id/button_apply"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

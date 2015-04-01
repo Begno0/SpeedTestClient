@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundButton">
+        <attr
+            name="radius"
+            format="integer" />
+
+        <attr
+            name="color_base"
+            format="string" />
+
+        <attr
+            name="color_hover"
+            format="string" />
+
+        <attr
+            name="color_load"
+            format="string" />
+
+        <attr
+            name="image"
+            format="reference" />
+
+        <attr
+            name="shadow"
+            format="boolean" />
+
+        <attr
+            name="text"
+            format="string" />
+    </declare-styleable>
+</resources>
